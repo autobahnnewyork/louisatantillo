@@ -1,0 +1,85 @@
+/* Apply styles to the whole page */
+body {
+    background-color: white;
+    color: black;
+    font-family: 'Helvetica', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+h1, p {
+    margin: 0;
+    padding: 1em;
+    letter-spacing: 0.5px; /* Adds space between letters */
+}
+
+a {
+    color: pink;
+    text-decoration: none;
+    letter-spacing: 0.5px; /* Adds space between link letters */
+}
+
+a:hover {
+    color: #ec2162;
+    text-decoration: underline;
+}
+
+/* Create a flex container for image and text */
+.content-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 1em;
+    gap: 20px;
+}
+
+.content-container img {
+    width: 66.67%;
+    height: auto;
+}
+
+/* Flex container for text and links/email */
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.text-container p {
+    max-width: 700px;
+    font-size: 1rem;
+    text-align: left;
+    letter-spacing: 0.3px; /* More subtle spacing for paragraph text */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: pink;
+    margin-top: 20px;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 12px;
+    }
+    p {
+        font-size: 12px;
+    }
+    .content-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .content-container img {
+        width: 100%;
+        max-width: none;
+    }
+    .text-container {
+        align-items: center;
+    }
+}
+
