@@ -1,4 +1,3 @@
-/* Apply styles to the whole page */
 body {
     background-color: white;
     color: black;
@@ -25,7 +24,6 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Create a flex container for image and text */
 .content-container {
     display: flex;
     justify-content: flex-start;
@@ -39,7 +37,6 @@ a:hover {
     height: auto;
 }
 
-/* Flex container for text and links/email */
 .text-container {
     display: flex;
     flex-direction: column;
