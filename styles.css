@@ -24,19 +24,20 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Flex container for image and text */
 .content-container {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     padding: 1em;
     gap: 20px;
-    flex-wrap: wrap; /* Ensures items wrap on smaller screens */
+    flex-wrap: nowrap; /* Prevents wrapping on desktop */
 }
 
 .content-container img {
     width: 66.67%;
     height: auto;
-    object-fit: cover; /* Ensures the image covers the container without distortion */
+    object-fit: cover;
 }
 
 .text-container {
@@ -53,6 +54,7 @@ a:hover {
     letter-spacing: 0.3px;
 }
 
+/* Footer styling */
 footer {
     text-align: center;
     padding: 20px;
@@ -61,6 +63,7 @@ footer {
     letter-spacing: 0.5px;
 }
 
+/* Responsive adjustments for mobile devices */
 @media (max-width: 600px) {
     h1, p {
         font-size: 12px;
@@ -82,4 +85,3 @@ footer {
         align-items: center;
     }
 }
-
