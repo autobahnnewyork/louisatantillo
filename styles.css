@@ -1,87 +1,113 @@
 body {
-    background-color: white;
-    color: black;
-    font-family: 'Helvetica', sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: left;
+background-color: white;
+color: black;
+font-family: ‘Helvetica’, sans-serif;
+margin: 0;
+padding: 0;
+text-align: left;
 }
 
 h1, p {
-    margin: 0;
-    padding: 1em;
-    letter-spacing: 0.5px;
+margin: 0;
+padding: 1em;
+letter-spacing: 0.5px;
 }
 
 a {
-    color: pink;
-    text-decoration: none;
-    letter-spacing: 0.5px;
+color: pink;
+text-decoration: none;
+letter-spacing: 0.5px;
 }
 
 a:hover {
-    color: #ec2162;
-    text-decoration: underline;
+color: #ec2162;
+text-decoration: underline;
 }
 
 /* Flex container for image and text */
 .content-container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 1em;
-    gap: 20px;
-    flex-wrap: nowrap; /* Prevents wrapping on desktop */
+display: flex;
+justify-content: flex-start;
+align-items: flex-start;
+padding: 1em;
+gap: 20px;
+flex-wrap: nowrap; /* Prevents wrapping on desktop */
 }
 
 .content-container img {
-    width: 66.67%;
-    height: auto;
-    object-fit: cover;
+width: 66.67%;
+height: auto;
+object-fit: cover;
+max-width: 100%; /* Prevents overflow */
 }
 
 .text-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 10px;
-    max-width: 700px;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+gap: 10px;
+max-width: 700px;
 }
 
 .text-container p {
-    font-size: 1rem;
-    text-align: left;
-    letter-spacing: 0.3px;
+font-size: 1rem;
+text-align: left;
+letter-spacing: 0.3px;
 }
 
 /* Footer styling */
 footer {
-    text-align: center;
-    padding: 20px;
-    background-color: pink;
-    margin-top: 20px;
-    letter-spacing: 0.5px;
+text-align: center;
+padding: 20px;
+background-color: pink;
+margin-top: 20px;
+letter-spacing: 0.5px;
 }
 
 /* Responsive adjustments for mobile devices */
 @media (max-width: 600px) {
-    h1, p {
-        font-size: 12px;
-    }
+/* Reduce padding on mobile to prevent cropping */
+body {
+padding: 0;
+}
 
-    .content-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
+```
+h1, p {
+    font-size: 12px;
+    padding: 0.5em; /* Reduced padding for mobile */
+}
 
-    .content-container img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-    }
+.content-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0.5em; /* Reduced padding for mobile */
+    gap: 10px; /* Reduced gap for mobile */
+}
 
-    .text-container {
-        align-items: center;
-    }
+.content-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-width: 100%;
+    box-sizing: border-box; /* Ensures padding/borders don't cause overflow */
+}
+
+.text-container {
+    align-items: center;
+    width: 100%; /* Ensures full width usage */
+    max-width: none; /* Remove max-width constraint on mobile */
+}
+
+.text-container p {
+    font-size: 12px; /* Consistent with h1, p sizing */
+    padding: 0.5em; /* Consistent reduced padding */
+}
+
+/* Ensure footer doesn't have excessive padding on mobile */
+footer {
+    padding: 15px 10px;
+}
+```
+
 }
