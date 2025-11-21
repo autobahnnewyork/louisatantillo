@@ -1,113 +1,83 @@
 body {
-background-color: white;
-color: black;
-font-family: ‘Helvetica’, sans-serif;
-margin: 0;
-padding: 0;
-text-align: left;
+    background: url('https://www.dropbox.com/scl/fi/9chncdf7i3gp4r4q6l6n1/album-cover-lulu.jpg?rlkey=omgs9u1ywq1mrfhxlp32pnp8u&dl=1')
+                no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    font-family: 'Helvetica', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    letter-spacing: 1.5px;
+
+}
+
+/* Remove your current flex image layout */
+.content-container img {
+    display: none !important;
 }
 
 h1, p {
-margin: 0;
-padding: 1em;
-letter-spacing: 0.5px;
+    margin: 0;
+    padding: 1em;
+    letter-spacing: 1.5px;
+    color: white;
 }
 
 a {
-color: pink;
-text-decoration: none;
-letter-spacing: 0.5px;
+    color: white;
+    font-style: italic;
+    text-decoration: none;
+    letter-spacing: 1.5px;
 }
 
 a:hover {
-color: #ec2162;
-text-decoration: underline;
+    color: #6a89a7;
+    font-style: italic;
+    text-decoration: underline;
 }
 
-/* Flex container for image and text */
+/* Container for your text only */
 .content-container {
-display: flex;
-justify-content: flex-start;
-align-items: flex-start;
-padding: 1em;
-gap: 20px;
-flex-wrap: nowrap; /* Prevents wrapping on desktop */
-}
-
-.content-container img {
-width: 66.67%;
-height: auto;
-object-fit: cover;
-max-width: 100%; /* Prevents overflow */
+    display: flex;
+    justify-content: flex-end; /* pushes content to the right */
+    align-items: flex-start;
+    padding: 2em;
 }
 
 .text-container {
-display: flex;
-flex-direction: column;
-justify-content: flex-start;
-gap: 10px;
-max-width: 700px;
-}
-
-.text-container p {
-font-size: 1rem;
-text-align: left;
-letter-spacing: 0.3px;
-}
-
-/* Footer styling */
-footer {
-text-align: center;
-padding: 20px;
-background-color: pink;
-margin-top: 20px;
-letter-spacing: 0.5px;
-}
-
-/* Responsive adjustments for mobile devices */
-@media (max-width: 600px) {
-/* Reduce padding on mobile to prevent cropping */
-body {
-padding: 0;
-}
-
-```
-h1, p {
-    font-size: 12px;
-    padding: 0.5em; /* Reduced padding for mobile */
-}
-
-.content-container {
+    max-width: 700px;
+    display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 0.5em; /* Reduced padding for mobile */
-    gap: 10px; /* Reduced gap for mobile */
+    gap: 10px;
+    text-align: right;
 }
 
-.content-container img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    max-width: 100%;
-    box-sizing: border-box; /* Ensures padding/borders don't cause overflow */
-}
-
-.text-container {
-    align-items: center;
-    width: 100%; /* Ensures full width usage */
-    max-width: none; /* Remove max-width constraint on mobile */
-}
-
-.text-container p {
-    font-size: 12px; /* Consistent with h1, p sizing */
-    padding: 0.5em; /* Consistent reduced padding */
-}
-
-/* Ensure footer doesn't have excessive padding on mobile */
+/* Footer styled to blend into background */
 footer {
-    padding: 15px 10px;
+    text-align: right;
+    padding: 20px;
+    background: transparent; /* removes pink bar */
+    color: white;
 }
-```
 
+/* Mobile adjustments */
+@media (max-width: 600px) {
+    h1, p {
+        font-size: 12px;
+        padding: 0.5em;
+    }
+
+    .content-container {
+        padding: 1em;
+    }
+
+    .text-container {
+        width: 100%;
+        max-width: none;
+    }
+
+    footer {
+        padding: 15px 10px;
+        text-align: center;
+    }
 }
