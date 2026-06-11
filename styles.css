@@ -1,8 +1,7 @@
 body {
-    background: url('https://www.dropbox.com/scl/fi/9chncdf7i3gp4r4q6l6n1/album-cover-lulu.jpg?rlkey=omgs9u1ywq1mrfhxlp32pnp8u&dl=1')
-                no-repeat center center fixed;
-    background-size: cover;
-    color: white;
+
+    background-color: white;
+    color: black;
     font-family: 'Helvetica', sans-serif;
     margin: 0;
     padding: 0;
@@ -11,7 +10,6 @@ body {
 
 }
 
-/* Remove your current flex image layout */
 .content-container img {
     display: none !important;
 }
@@ -20,11 +18,11 @@ h1, p {
     margin: 0;
     padding: 1em;
     letter-spacing: 1.5px;
-    color: white;
+    color: black;
 }
 
 a {
-    color: white;
+    color: black;
     font-style: italic;
     text-decoration: none;
     letter-spacing: 1.5px;
@@ -36,7 +34,6 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Container for your text only */
 .content-container {
     display: flex;
     justify-content: flex-end; /* pushes content to the right */
@@ -52,15 +49,14 @@ a:hover {
     text-align: right;
 }
 
-/* Footer styled to blend into background */
 footer {
     text-align: right;
     padding: 20px;
-    background: transparent; /* removes pink bar */
+    background: transparent; 
     color: white;
 }
 
-/* Mobile adjustments */
+
 @media (max-width: 600px) {
     h1, p {
         font-size: 12px;
